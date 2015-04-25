@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Table Background</title>
+</head>
+<body>
+<table border="1" bordercolor="green" bgcolor="yellow">
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+<tr><td rowspan="2">Row 1 Cell 1</td><td>Row 1 Cell 2</td><td>Row 1 Cell 3</td></tr>
+<tr><td>Row 2 Cell 2</td><td>Row 2 Cell 3</td></tr>
+<tr><td colspan="3">Row 3 Cell 1</td></tr>
+</table>
+<button onclick="ajaxFunction()">Increment Counter!</button>
+<div='demo'></div>
+</body>
+</html>
+<script type="text/Javascript">
+  function ajaxFunction(){
+      var ajaxRequest;  // The variable that makes Ajax possible!
+
+      try{
+         // Opera 8.0+, Firefox, Safari 
+         ajaxRequest = new XMLHttpRequest();
+		 document.write("HI");
+      }catch (e){
+
+         // Internet Explorer Browsers
+         try{
+            ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+         }catch (e) {
+            try{
+               ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }catch (e){
+
+               // Something went wrong
+               alert("Your browser broke!");
+               return false;
+            }
+         }
+      }
+   } 
+ 
+</script>
